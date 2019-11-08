@@ -88,7 +88,7 @@ public class Flight {
 	}
 	
 	private int seats;
-
+	public int id;
 
 	public Flight(String src,String dest, ArrayList<Day> daysOfWeek, String flightNum, String depTime, String arrTime)	{
 		this.src=src;
@@ -99,5 +99,6 @@ public class Flight {
 		this.arrTime=new Time(arrTime);
 		this.airline="";
 		this.seats=150;
+		this.id=0;
 	}
 }

@@ -20,8 +20,8 @@ public class FlightManager {
         myMgr.setSearchMgr(new SearchManager(myMgr));
        
         // initialise data
-        myMgr.domList = myMgr.dataMgr.loadDomestic("2016.spicejet.csv");
-        myMgr.intList = myMgr.dataMgr.loadInternational("2016.silkair.csv");
+        myMgr.domList = myMgr.dataMgr.readCsv("dom_Flight.csv", myMgr.dataMgr.loadDomestic("2016.spicejet.csv"));
+        myMgr.intList = myMgr.dataMgr.readCsv("int_Flight.csv", myMgr.dataMgr.loadInternational("2016.silkair.csv"));
        
         // show screen1
         myMgr.displayMgr.showScreen1(myMgr.displayMgr);
@@ -42,5 +42,7 @@ public class FlightManager {
 	public void setSearchMgr(SearchManager searchMgr) {
 		this.searchMgr = searchMgr;
 	}
-
+        public DataManager getDataMgr(){
+            return dataMgr;
+        }
 }

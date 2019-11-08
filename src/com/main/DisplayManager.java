@@ -20,7 +20,6 @@ public class DisplayManager {
     }
    
     public void showScreen1(DisplayManager dmgr) {
-    	screen1.getContentPane().removeAll();
     	screen1.setDMgr(dmgr);
         screen2.setVisible(false);
         screen3.setVisible(false);
@@ -29,9 +28,8 @@ public class DisplayManager {
     }
    
     public void showScreen2(DisplayManager dmgr) {
-    	screen2.getContentPane().removeAll();
     	screen2.setDMgr(dmgr);
-        screen1.setVisible(false);
+    	screen1.setVisible(false);
         screen3.setVisible(false);
         screen4.setVisible(false);
         screen2.setVisible(true);
@@ -39,7 +37,6 @@ public class DisplayManager {
     }
     
     public void showScreen3(DisplayManager dmgr) {
-    	screen3.getContentPane().removeAll();
     	screen3.setDMgr(dmgr);
         screen1.setVisible(false);
         screen2.setVisible(false);
@@ -48,7 +45,6 @@ public class DisplayManager {
     }
     
     public void showScreen4(DisplayManager dmgr) {
-    	screen4.getContentPane().removeAll();
     	screen4.setDMgr(dmgr);
         screen1.setVisible(false);
         screen2.setVisible(false);

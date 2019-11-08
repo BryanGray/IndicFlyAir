@@ -82,8 +82,8 @@ public class SearchManager {
 			if(!intFlight.getDaysOfWeek().contains(new Day(stringToValue(p).getDay())))
 				return false;
 		}
-		if(intFlight.getSrc().equalsIgnoreCase(domFlight.getDest()) && (layover>=120 && layover<=360)) {
-			System.out.println(layover);
+		if(intFlight.getSrc().equalsIgnoreCase(domFlight.getDest()) && (layover>=120 && layover<=360) && (intFlight.getSeats()>=p.getSeats() && domFlight.getSeats()>=p.getSeats())) {
+			//System.out.println(layover);
 			return true;
 		}
 		

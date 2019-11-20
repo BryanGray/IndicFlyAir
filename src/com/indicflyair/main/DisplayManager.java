@@ -1,9 +1,9 @@
-package com.main;
+package com.indicflyair.main;
 
-import com.gui.Screen1;
-import com.gui.Screen2;
-import com.gui.Screen3;
-import com.gui.Screen4;
+import com.indicflyair.gui.Screen1;
+import com.indicflyair.gui.Screen2;
+import com.indicflyair.gui.Screen3;
+import com.indicflyair.gui.Screen4;
 
 public class DisplayManager {
 	private FlightManager mgr;

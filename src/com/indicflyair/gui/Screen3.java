@@ -1,4 +1,4 @@
-package com.gui;
+package com.indicflyair.gui;
 
 import java.awt.Dimension;
 import java.awt.Insets;
@@ -24,10 +24,12 @@ import javax.swing.event.PopupMenuEvent;
 import javax.swing.event.PopupMenuListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import com.main.DisplayManager;
-import com.main.Flight;
-import com.main.Passenger;
-import com.main.Query;
+
+import com.indicflyair.main.DisplayManager;
+import com.indicflyair.main.Flight;
+import com.indicflyair.main.Passenger;
+import com.indicflyair.main.Query;
+import com.indicflyair.partials.Time;
 
 public class Screen3 extends JFrame implements Screen{
 	/**
@@ -170,10 +172,10 @@ public class Screen3 extends JFrame implements Screen{
 				Flight com[]=q.getComFlight();
 				trow[0]=com[0].getSrc()+"-"+com[0].getDest()+"-"+com[1].getDest();
 				trow[1]=com[0].getFlightNum()+"-"+com[1].getFlightNum();
-				trow[2]=Integer.toString(q.getLayover());
-				trow[3]=Integer.toString(q.getTotalTime());
-				trow[4]=q.getDepTime().showTime();
-				trow[5]=q.getArrTime().showTime();
+				trow[2]=new Time(q.getLayover()).showTime(1);
+				trow[3]=new Time(q.getTotalTime()).showTime(1);
+				trow[4]=q.getDepTime().showTime(2);
+				trow[5]=q.getArrTime().showTime(2);
 				dm.addRow(trow);
 			}
 			proceedButton.addActionListener(new ActionListener() {

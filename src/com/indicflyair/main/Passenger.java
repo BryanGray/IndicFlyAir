@@ -1,9 +1,9 @@
-package com.main;
+package com.indicflyair.main;
 
 import java.text.ParseException;
 import java.util.Calendar;
 
-import com.partials.DateLabelFormatter;
+import com.indicflyair.partials.DateLabelFormatter;
 
 public class Passenger {
 	private String name,source, date;

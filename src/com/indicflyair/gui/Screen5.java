@@ -1,26 +1,32 @@
-package com.gui;
+package com.indicflyair.gui;
 
-import javax.swing.BoxLayout;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-
-import com.main.Flight;
-import com.main.Query;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
+import com.indicflyair.main.Flight;
+import com.indicflyair.main.Query;
+import com.indicflyair.partials.Time;
+
 public class Screen5 extends JFrame implements Screen {
-        private Query q;
+        /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+		private Query q;
 	Screen5(Query q){
             this.q=q;
             initComponents();
@@ -126,12 +132,12 @@ public class Screen5 extends JFrame implements Screen {
             l2.setText("Total-Time:  ");
             l3.setText("Layover: ");
             t1.setText(com[0].getSrc()+"->"+com[0].getDest()+"->"+com[1].getDest());
-            t2.setText(q.getTotalTime()+"");
-            t3.setText(q.getLayover()+"");
+            t2.setText(new Time(q.getTotalTime()).showTime(1));
+            t3.setText(new Time(q.getLayover()).showTime(1));
             dm.setRowCount(0);
-            String data1[]={com[0].getSrc()+"->"+com[0].getDest(),com[0].getFlightNum(),""+com[0].getDepTime().diffTime(com[0].getArrTime()),com[0].getDepTime().showTime(),com[0].getArrTime().showTime()};
+            String data1[]={com[0].getSrc()+"->"+com[0].getDest(),com[0].getFlightNum(),""+com[0].getDepTime().diffTime(com[0].getArrTime()),com[0].getDepTime().showTime(2),com[0].getArrTime().showTime(2)};
             dm.addRow(data1);
-            String data2[]={com[1].getSrc()+"->"+com[1].getDest(),com[1].getFlightNum(),""+com[1].getDepTime().diffTime(com[1].getArrTime()),com[1].getDepTime().showTime(),com[1].getArrTime().showTime()};
+            String data2[]={com[1].getSrc()+"->"+com[1].getDest(),com[1].getFlightNum(),""+com[1].getDepTime().diffTime(com[1].getArrTime()),com[1].getDepTime().showTime(2),com[1].getArrTime().showTime(2)};
             dm.addRow(data2);            
         }
         public void setQuery(Query q){

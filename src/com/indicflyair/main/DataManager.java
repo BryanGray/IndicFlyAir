@@ -1,14 +1,15 @@
-package com.main;
+package com.indicflyair.main;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-import com.partials.Day;
-import java.io.FileWriter;
+import com.indicflyair.partials.Day;
+import java.io.File;
 
 public class DataManager {
 	protected String arrtime, deptime, days , source, dest, fl_no;
@@ -53,7 +54,7 @@ public class DataManager {
 	public ArrayList<Flight> readCsv(String filename, ArrayList<Flight> FlightList){
 		try {
 			@SuppressWarnings("resource")
-			BufferedReader br =new BufferedReader(new FileReader(filename));
+			BufferedReader br =new BufferedReader(new FileReader(new File(filename)));
 			String input; 
 			int count=0;
 			while((input=br.readLine())!=null){
@@ -80,7 +81,7 @@ public class DataManager {
 	public void updateDomCsv(int fl_no, int val,String filename)
 	{
 		try {
-			FileWriter csvWriter = new FileWriter(filename);
+			FileWriter csvWriter = new FileWriter(new File(filename));
 			csvWriter.append("Number");
 			csvWriter.append(",");
 			csvWriter.append("Seats");
@@ -116,7 +117,7 @@ public class DataManager {
 	public void updateIntCsv(int fl_no, int val,String filename)
 	{
 		try {
-			FileWriter csvWriter = new FileWriter(filename);
+			FileWriter csvWriter = new FileWriter(new File(filename));
 			csvWriter.append("Number");
 			csvWriter.append(",");
 			csvWriter.append("Seats");
@@ -153,7 +154,7 @@ public class DataManager {
 		Flight f; ArrayList<Flight> FlightList = new ArrayList<Flight>(); 
 		try {
 			@SuppressWarnings("resource")
-			BufferedReader br =new BufferedReader(new FileReader(filename));
+			BufferedReader br =new BufferedReader(new FileReader(new File(filename)));
 			String input; 
 			DataManager dm=new DataManager(mgr);
 			int count=0;
@@ -190,7 +191,7 @@ public class DataManager {
 		Flight f; BufferedReader br;
 		ArrayList<Flight> FlightList = new ArrayList<Flight>();
 		try {
-			br=new BufferedReader(new FileReader(filename));
+			br=new BufferedReader(new FileReader(new File(filename)));
 			String input;
 			DataManager dm=new DataManager(mgr);
 			int count=0;
@@ -218,7 +219,6 @@ public class DataManager {
 		catch(IOException e){
 			System.out.println("IO Error");
 		}
-
 
 		return FlightList;
 	}

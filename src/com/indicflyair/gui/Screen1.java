@@ -1,8 +1,7 @@
-package com.gui;
+package com.indicflyair.gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Frame;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -10,10 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Properties;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -26,10 +23,9 @@ import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
 
-import com.main.DisplayManager;
-
-import com.main.Passenger;
-import com.partials.DateLabelFormatter;
+import com.indicflyair.main.DisplayManager;
+import com.indicflyair.main.Passenger;
+import com.indicflyair.partials.DateLabelFormatter;
 
 public class Screen1 extends JFrame implements Screen{
 

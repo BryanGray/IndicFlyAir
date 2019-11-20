@@ -1,8 +1,8 @@
-package com.main;
+package com.indicflyair.main;
 import java.util.ArrayList;
 
-import com.partials.Day;
-import com.partials.Time;
+import com.indicflyair.partials.Day;
+import com.indicflyair.partials.Time;
 
 public class Flight {
 	private String flightNum, src,dest;

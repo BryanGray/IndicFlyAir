@@ -1,4 +1,4 @@
-package com.partials;
+package com.indicflyair.partials;
 
 public class Day {
 	private String day;

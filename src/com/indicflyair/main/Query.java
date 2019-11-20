@@ -1,7 +1,7 @@
-package com.main;
+package com.indicflyair.main;
 import java.util.Comparator;
 
-import com.partials.Time;
+import com.indicflyair.partials.Time;
 
 public class Query{
 	private Flight comFlight[]=new Flight[2];

@@ -1,4 +1,4 @@
-package com.gui;
+package com.indicflyair.gui;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -13,9 +13,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.main.DisplayManager;
-import com.main.Flight;
-import com.main.Passenger;
+import com.indicflyair.main.DisplayManager;
+import com.indicflyair.main.Flight;
+import com.indicflyair.main.Passenger;
 
 public class Screen4 extends JFrame implements Screen{
 	/**

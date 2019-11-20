@@ -1,4 +1,4 @@
-package com.gui;
+package com.indicflyair.gui;
 
 import java.awt.Image;
 import java.io.File;
